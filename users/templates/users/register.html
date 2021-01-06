@@ -1,10 +1,15 @@
  {% extends "blog/base.html" %} 
  {% load crispy_forms_tags %} 
  {% block title %}
-  <title>Sign Up - nccbuddy.com</title>
+  <title>Sign Up | A-Pub</title>
 {% endblock %}
  {% block content %}
-<div class="content-section">
+ <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
+<div class="content-section" style="border-width: 2px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);>
     <form method="POST">
         {% csrf_token %}
         <fieldset class="form-group">
@@ -12,7 +17,7 @@
             {{ form|crispy }}
         </fieldset>
         <div class="form-group">
-            <small>By signing up you are agree to follow nccbuddies guidelines (<a href="{% url 'community:guidelines' %}">click here</a> to read)</small>.<br><br>
+            <small>By signing up you are agree to follow A-Pub (<a href="{% url 'community:guidelines' %}">click here</a> to read)</small>.<br><br>
             <button class="btn btn-outline-info btn-sm" type="submit">Sign Up</button>
         </div>
     </form>
