@@ -16,7 +16,7 @@
     </small>
 </div>
 <br>
-<div class="content-section" style="border-width: 2px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);>
+<div class="content-section">
     <form method="POST">
         {% csrf_token %}
         <fieldset class="form-group">
@@ -44,5 +44,6 @@
             <li>Don't have an account yet? <a href="{% url 'register' %}"> Click here</a> to register.</li>
         </ul>
     </div>
-</div><br>
+</div>
+<br>
 {% endblock content %}
